@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<title>Ruby on Rails Tutorial Sample App | <%= @title %></title>
-		<%= csrf_meta_tag %> 
+	<!--inseriamo l'hlper per gestire casi di mancanza di titolo -->
+	<title><%= title %></title>
+	<%= csrf_meta_tag %>
+	<!-- aggiungo stylesheet blueprint -->
+	<%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %> 
+	<%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
   </head>
   <body>
     <%= yield %>
